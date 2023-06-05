@@ -9,3 +9,18 @@ INSERT INTO movies VALUES(7,"Inception","Warner Bros. Pictures","Action, Adventu
 INSERT INTO movies VALUES(8,"Spider-Man: Into the Spider-Verse","Columbia Pictures","Adventure, Animation, Action","Bob Persichetti, Peter Ramsey, Rodney Rothman","Phil Lord, Rodney Rothman","Shameik Moore, Jake Johnson, Hailee Steinfeld",117,2018,"Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.","PG",8.4);
 INSERT INTO movies VALUES(9,"Seven","New Line Cinema","Drama, Thriller, Crime","David Fincher","Andrew Kevin Walker","Brad Pitt, Morgan Freeman, Kevin Spacey",127,1995,"Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.","R",8.6);
 INSERT INTO movies VALUES(10,"Interstellar","Paramount Pictures","Action, Adventure, Sci-Fi","Christopher Nolan","Christopher Nolan, Jonathan Nolan","Matthew McConaughey, Anne Hathaway, Jessica Chastain",169,2014,"When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.","PG",8.7);
+
+-- Query to display all data
+SELECT * FROM movies;
+
+-- Query to display movies with rating > 8
+SELECT * FROM movies WHERE criticsRating > 8;
+
+-- Query to display movies starting with B
+SELECT * FROM movies WHERE title LIKE 'B%';
+
+-- Query to display movies released prior to 2000 with rating >= 8.2
+SELECT * FROM movies WHERE year < 2000 AND criticsRating >= 8.2;
+
+-- Query to display movies released between 1990 and 2010 with mpaRating of R
+SELECT * FROM movies WHERE year BETWEEN 1990 AND 2010 AND mpaRating = 'R';
